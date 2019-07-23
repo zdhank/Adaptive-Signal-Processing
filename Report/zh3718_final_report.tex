@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% USFD Academic Report Template
+% Prof. Roger K. Moore
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,oneside]{book}
+\usepackage[margin=1in]{geometry}
+\usepackage[toc,page]{appendix}
+\usepackage{enumitem}   
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{natbib}
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath,amssymb,amsfonts,mathrsfs}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{float}
+\pagestyle{fancy}
+\lhead{ } 
+
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{5pt}{\LARGE}
+\titlespacing*{\chapter}{0pt}{0pt}{10pt}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}} 
+
+\begin{document}
+
+\captionsetup[figure]{margin=1cm,font=normalsize,labelfont={bf},name={Figure},labelsep=colon}
+\captionsetup[subfigure]{margin=0cm,font=footnotesize,labelfont={bf},labelsep=colon}
+\captionsetup[table]{margin=1cm,font=normalsize,labelfont={bf},name={Table},labelsep=colon}
+\setlipsumdefault{1}
+
+\frontmatter
+
+\begin{titlepage}
+
+% -------------------------------------------------------------------
+% You need to edit the details here
+% -------------------------------------------------------------------
+\includegraphics[width=5cm]{images/iclogo.eps}\\[1cm]
+\begin{center}
+\linespread{1.2}\huge {\bfseries Adaptive Signal Processing and Machine Intelligence}\\[4cm]
+\linespread{1}
+{\Large \textbf{Author:} Zhuoda Han (zh3718)}\\[1.5cm]
+{\large \textbf{CID:} 01540269}\\[1.5cm]
+{\large \textbf{Supervisor:} Prof. Danilo Mandic}\\[4cm] % if applicable
+\large \textbf {Department of Electrical and Electronic Engineering}\\[2cm]
+\large February 26, 2019
+\end{center}
+
+\tableofcontents
+
+\end{titlepage}
+
+
+% -------------------------------------------------------------------
+% Main sections (as required)
+% -------------------------------------------------------------------
+
+\mainmatter
+
+\input{sections/part1/part1.tex}
+\input{sections/part2/part2.tex}
+\input{sections/part3/part3.tex}
+\input{sections/part4/part4.tex}
+
+% -------------------------------------------------------------------
+% Bibliography
+% -------------------------------------------------------------------
+\renewcommand\bibname{References}
+\bibliographystyle{unsrt}
+\bibliography{library}
+% -------------------------------------------------------------------
+% Appendices
+% -------------------------------------------------------------------
+
+
+\end{document}
